@@ -1,0 +1,170 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, purple, #6a0dad);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Container */
+#startScreen,
+#examScreen,
+#resultScreen {
+    width: 800px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* Start Screen */
+#startScreen h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: purple;
+}
+
+/* Input & Select */
+#studentName,
+#subjectSelect {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#studentName:focus,
+#subjectSelect:focus {
+    border-color: purple;
+}
+
+/* Start Button */
+#startScreen button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: purple;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#startScreen button:hover {
+    background: #6a0dad;
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: purple;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+#timer {
+    font-weight: bold;
+}
+
+/* Question Area */
+#questionContainer {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#questionContainer h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* Option Buttons */
+#questionContainer button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+#questionContainer button:hover {
+    background: #f0e6ff;
+    border-color: purple;
+}
+
+/* Navigation Buttons */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.buttons button {
+    padding: 12px 20px;
+    border: none;
+    background: purple;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.buttons button:hover {
+    background: #6a0dad;
+}
+
+/* Result Screen */
+#resultScreen h2 {
+    color: purple;
+    font-size: 22px;
+}
+
+/* Timer Flash */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.flash {
+    animation: blink 1s infinite;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    #startScreen,
+    #examScreen,
+    #resultScreen {
+        width: 95%;
+        padding: 20px;
+    }
+
+    #startScreen h1 {
+        font-size: 28px;
+    }
+}
